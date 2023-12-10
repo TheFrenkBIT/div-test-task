@@ -33,3 +33,8 @@ Route::group([
 Route::group(['namespace' => 'App\Http\Controllers\Request'], function (){
     Route::post('/requests', StoreController::class);
 });
+
+Route::group(['namespace' => 'App\Http\Controllers\Request', 'middleware' => 'jwt.auth'], function (){
+    Route::get('/requests', IndexController::class);
+    Route::put('/requests/{request}', UpdateController::class);
+});

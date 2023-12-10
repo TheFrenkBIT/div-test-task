@@ -22,7 +22,7 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'comment' => 'string'
+            'comment' => 'required|string'
         ];
     }
 }

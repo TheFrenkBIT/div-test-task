@@ -17,7 +17,9 @@ class RequestResource extends JsonResource
         return [
             'name' => $this->name,
             'email' => $this->email,
-            'message' => $this->message
+            'message' => $this->message,
+            'comment' => $this->comment,
+            'status' => $this->status
         ];
     }
 }

@@ -22,8 +22,9 @@ class FilterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => 'required|in:Active,Resolved',
-            'created_at' => ''
+            'status' => 'in:Active,Resolved',
+            'start_date' => 'string',
+            'end_date' => 'string'
         ];
     }
 }
